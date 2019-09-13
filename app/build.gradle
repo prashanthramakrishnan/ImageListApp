@@ -8,7 +8,7 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.prashanth.imageapp.TestRunner"
         buildConfigField "String", "SHUTTERSTOCK_URL", "\"${project.shutterstockURL}\""
         buildConfigField "String", "CLIENT_ID", "\"${project.clientId}\""
         buildConfigField "String", "CLIENT_SECRET", "\"${project.clientSecret}\""

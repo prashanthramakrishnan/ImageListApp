@@ -23,7 +23,6 @@ import com.prashanth.imageapp.presenter.ImageDetailsPresenter;
 import com.prashanth.imageapp.utils.Constants;
 import java.util.ArrayList;
 import javax.inject.Inject;
-import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity implements APIContract.ImageListView, EditText.OnEditorActionListener {
 
@@ -92,7 +91,6 @@ public class MainActivity extends AppCompatActivity implements APIContract.Image
 
     @Override
     public void callFailed(Throwable throwable) {
-        Timber.e(throwable, "Something went wrong..");
         dismissProgressDialog();
         showSnackBarError();
     }
