@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ImageApp</string>
+    <string name="photo_id">ImageApp</string>
+    <string name="enter_search_string">Enter search query..</string>
+    <string name="loading">Loading.... please wait!</string>
+    <string name="error">Something went wrong or there are no search results matching the criteria</string>
+</resources>

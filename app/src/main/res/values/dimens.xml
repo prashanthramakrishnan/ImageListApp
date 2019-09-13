@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_padding">4dp</dimen>
+    <dimen name="search_view_padding">45dp</dimen>
+    <dimen name="search_text_size">15sp</dimen>
+</resources>
