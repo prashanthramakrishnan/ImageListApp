@@ -12,6 +12,7 @@ android {
         buildConfigField "String", "SHUTTERSTOCK_URL", "\"${project.shutterstockURL}\""
         buildConfigField "String", "CLIENT_ID", "\"${project.clientId}\""
         buildConfigField "String", "CLIENT_SECRET", "\"${project.clientSecret}\""
+        buildConfigField "String", "CATEGORY", "\"${project.category}\""
     }
     buildTypes {
         release {

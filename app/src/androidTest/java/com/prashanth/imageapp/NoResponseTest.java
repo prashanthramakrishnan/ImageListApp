@@ -48,17 +48,25 @@ public class NoResponseTest {
         //Launch app with the MockServer running
         rule.launchActivity(new Intent());
 
+        //force server to return an error and check the error message
+
+        assertTrue(solo.waitForText("Something went wrong or there are no search results matching the criteria"));
+
+        introduceDelay(3000L);
+
+        //search for art
+
         EditText searchEditText = (EditText) solo.getView(R.id.search_edittext);
 
-        //search for mud
-        solo.enterText(searchEditText, "mud");
+        solo.clearEditText(searchEditText);
+
+        solo.enterText(searchEditText, "art");
 
         solo.pressSoftKeyboardSearchButton();
 
         assertTrue(solo.waitForText("Something went wrong or there are no search results matching the criteria"));
 
         introduceDelay(3000L);
-
     }
 
     private void setupServer() throws Exception {

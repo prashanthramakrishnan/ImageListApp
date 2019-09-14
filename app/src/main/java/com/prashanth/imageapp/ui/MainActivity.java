@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.google.android.material.snackbar.Snackbar;
+import com.prashanth.imageapp.BuildConfig;
 import com.prashanth.imageapp.R;
 import com.prashanth.imageapp.ShutterstockImageApplication;
 import com.prashanth.imageapp.adapter.ImageListAdapter;
@@ -56,7 +57,9 @@ public class MainActivity extends AppCompatActivity implements APIContract.Image
         progressDialog = new ProgressDialog(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
+        searchEditText.setText("music");
         searchEditText.setOnEditorActionListener(this);
+        fetchImages(searchEditText.getText().toString());
     }
 
     @Override
@@ -115,7 +118,11 @@ public class MainActivity extends AppCompatActivity implements APIContract.Image
     private void onSearchClicked(String searchString) {
         hideKeyboard();
         searchEditText.setText(searchString);
-        presenter.fetchImages(Constants.CATEGORY, searchString, null,
+        fetchImages(searchString);
+    }
+
+    private void fetchImages(String searchString) {
+        presenter.fetchImages(BuildConfig.CATEGORY, searchString, null,
                 Constants.PAGE_NUMBER, Constants.MAX_ITEMS_PER_PAGE, this);
     }
 

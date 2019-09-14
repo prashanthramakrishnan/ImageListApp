@@ -50,16 +50,23 @@ public class SuccessfulResponseFlowTest {
         //Launch app with the MockServer running
         rule.launchActivity(new Intent());
 
+        //by default the app searches for music
+
+        introduceDelay(3000L);
+
         EditText searchEditText = (EditText) solo.getView(R.id.search_edittext);
 
-        //search for music
-        solo.enterText(searchEditText, "music");
+        //search for art
+
+        solo.clearEditText(searchEditText);
+
+        solo.enterText(searchEditText, "art");
 
         solo.pressSoftKeyboardSearchButton();
 
-        assertFalse(solo.getCurrentActivity().isFinishing());
-
         introduceDelay(3000L);
+
+        assertFalse(solo.getCurrentActivity().isFinishing());
 
     }
 
