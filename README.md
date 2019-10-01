@@ -5,8 +5,7 @@ ImageApp
 
 **Features**
 - Uses MVP pattern, dagger for dependency injection and RxJava2
-- I decided to use Java, although kotlin would have been nice as well (may be I will create a branch and convert this to Kotlin), ask
- me why I decided to use Java in case I get selected 😉
+- I decided to use Java, although kotlin would have been nice as well (may be I will create a branch and convert this to Kotlin)
 - Fetches the image details via the specified API endpoint from Shutterstock and shows the image list in a recycler 
 view
 - The image is loaded within a Constraint layout, whose width and height is set dynamically to maintain the aspect ratio.
